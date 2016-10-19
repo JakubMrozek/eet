@@ -1,0 +1,31 @@
+{
+  "name": "eet",
+  "version": "0.0.1",
+  "description": "Node.js knihovna pro EET",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakubMrozek/eet.git"
+  },
+  "keywords": [
+    "eet",
+    "elektronická evidence tržeb",
+    "babiš"
+  ],
+  "author": {
+    "name": "Jakub Mrozek",
+    "email": "jakub.mrozek@gmail.com",
+    "url": "www.ronnieweb.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JakubMrozek/eet/issues"
+  },
+  "homepage": "https://github.com/JakubMrozek/eet#readme",
+  "devDependencies": {
+    "ava": "^0.16.0"
+  }
+}
