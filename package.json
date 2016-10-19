@@ -4,7 +4,7 @@
   "description": "Node.js knihovna pro EET",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava test/tests.js"
   },
   "repository": {
     "type": "git",
