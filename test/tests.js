@@ -45,6 +45,7 @@ test('do request', async t => {
     privateKey: PRIVATE_KEY,
     certificate: CERTIFICATE
   }
-  const result = await eet.doRequest(options, data)
-  console.log(result)
+  const {fik} = await eet.doRequest(options, data)
+  // TODO offline
+  t.truthy(fik.length === 39)
 })
