@@ -24,18 +24,20 @@ test('generate BKP', t => {
   t.is(eet.generateBKP(TEST_PKP), '3F9119C1-FBF34535-D30B60F8-9859E4A6-C8C8AAFA')
 })
 
-test('date to ISO', t => {
+test('format date', t => {
   const date = new Date('2016-08-05T00:30:12+02:00')
-  t.is(util.dateToISO(date), '2016-08-04T22:30:12Z')
+  t.is(util.formatDate(date), '2016-08-04T22:30:12Z')
 })
 
 test('do request', async t => {
   const data = {
+    prvniZaslani: true,
+    overeni: false,
     dicPopl: 'CZ1212121218',
     idPokl: '/5546/RO24',
     poradCis: '0/6460/ZQ42',
     datTrzby: new Date('2016-08-05T00:30:12+02:00'),
-    celkTrzba: '34113.00',
+    celkTrzba: 34113.00,
     idProvoz: '273'
   }
   const options = {
