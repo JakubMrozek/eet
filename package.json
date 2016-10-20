@@ -27,5 +27,9 @@
   "homepage": "https://github.com/JakubMrozek/eet#readme",
   "devDependencies": {
     "ava": "^0.16.0"
+  },
+  "dependencies": {
+    "soap": "^0.17.0",
+    "ursa": "^0.9.4"
   }
 }
