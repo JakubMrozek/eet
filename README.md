@@ -18,7 +18,8 @@ const eet = require('eet')
 // privatni klic a certifikat podnikatele
 const options = {
   privateKey: '...',
-  certificate: '...'
+  certificate: '...',
+  playground: true
 }
 
 // polozky, ktere se posilaji do EET 
@@ -54,7 +55,7 @@ Alternativně lze klíče získat pomocí balíčku [pem](https://github.com/and
 
 ## Nastavení
 
-### eet(options, items)
+### eet (options, items)
 
 * *options* - Volby pro odesílání požadavku (pro SOAP).
   * *options.privateKey* (string) - Privátní klíč.
