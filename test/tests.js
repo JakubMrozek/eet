@@ -29,7 +29,7 @@ test('date to ISO', t => {
   t.is(util.dateToISO(date), '2016-08-04T22:30:12Z')
 })
 
-test('send', async t => {
+test('do request', async t => {
   const data = {
     dicPopl: 'CZ1212121218',
     idPokl: '/5546/RO24',
@@ -38,6 +38,11 @@ test('send', async t => {
     celkTrzba: '34113.00',
     idProvoz: '273'
   }
-  const result = await eet.send(PRIVATE_KEY, CERTIFICATE, data)
+  const options = {
+    playground: true,
+    privateKey: PRIVATE_KEY,
+    certificate: CERTIFICATE
+  }
+  const result = await eet.doRequest(options, data)
   console.log(result)
 })

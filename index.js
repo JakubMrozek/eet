@@ -1,2 +1,2 @@
-const {send} = require('./lib/eet')
-module.exports = send
+const {doRequest} = require('./lib/eet')
+module.exports = doRequest
