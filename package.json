@@ -1,7 +1,7 @@
 {
   "name": "eet",
-  "version": "0.1.0",
-  "description": "Node.js knihovna pro EET",
+  "version": "0.2.0",
+  "description": "Node.js knihovna pro EET.",
   "main": "index.js",
   "scripts": {
     "test": "ava test/tests.js"
