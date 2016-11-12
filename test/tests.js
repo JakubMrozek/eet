@@ -2,6 +2,7 @@ import fs from 'fs'
 import test from 'ava'
 import eet from '../lib/eet'
 import util from '../lib/util'
+import validate from '../lib/validate'
 
 const PRIVATE_KEY = fs.readFileSync('./keys/private.pem')
 const CERTIFICATE = fs.readFileSync('./keys/certificate.pem')
@@ -27,6 +28,85 @@ test('generate BKP', t => {
 test('format date', t => {
   const date = new Date('2016-08-05T00:30:12+02:00')
   t.is(util.formatDate(date), '2016-08-04T22:30:12Z')
+})
+
+test('format number', t => {
+  t.is(util.formatNumber(12), '12.00')
+})
+
+test('validate required', t => {
+  t.notThrows(() => validate.requiredItems({
+    dicPopl: 'CZ1212121218',
+    idPokl: 1,
+    idProvoz: 1,
+    poradCis: '2016-0001s',
+    datTrzby: new Date(),
+    celkTrzba: 1000
+  }))
+  t.throws(() => validate.requiredItems({
+    idPokl: 1
+  }))
+})
+
+test('validate vat id number', t => {
+  t.notThrows(() => validate.vatIdNumber('CZ1212121218'))
+  t.throws(() => validate.vatIdNumber(1212121218))
+})
+
+test('validate business premises id', t => {
+  t.notThrows(() => validate.businessPremisesId(25))
+  t.throws(() => validate.businessPremisesId(12345678))
+})
+
+test('validate cash register id', t => {
+  t.notThrows(() => validate.cashRegisterId('1aZ.,:;/#-_'))
+  t.throws(() => validate.cashRegisterId('@@@'))
+})
+
+test('validate receipt number', t => {
+  t.notThrows(() => validate.receiptNumber('0aA.,:;/#-_'))
+  t.throws(() => validate.receiptNumber('@@@'))
+})
+
+test('validate date', t => {
+  t.notThrows(() => validate.date(new Date()))
+  t.throws(() => validate.date(new Date('test')))
+  t.throws(() => validate.date('test'))
+})
+
+test('validate regime', t => {
+  t.notThrows(() => validate.regime(1))
+  t.notThrows(() => validate.regime('1'))
+  t.throws(() => validate.regime('test'))
+})
+
+test('validate financial number', t => {
+  t.notThrows(() => validate.financialNumber(1000))
+  t.notThrows(() => validate.financialNumber(0))
+  t.notThrows(() => validate.financialNumber(-1000))
+  t.throws(() => validate.financialNumber('1000,00'))
+  t.throws(() => validate.financialNumber('test'))
+})
+
+test('get data items', t => {
+  const result = eet.getDataItems({
+    dicPopl: 'CZ1212121218',
+    idPokl: '/5546/RO24',
+    poradCis: '0/6460/ZQ42',
+    datTrzby: new Date('2016-08-05T00:30:12+02:00'),
+    celkTrzba: -34113.8,
+    idProvoz: '273'
+  })
+  const expected = {
+    dic_popl: 'CZ1212121218',
+    id_pokl: '/5546/RO24',
+    porad_cis: '0/6460/ZQ42',
+    dat_trzby: '2016-08-04T22:30:12Z',
+    celk_trzba: '-34113.80',
+    id_provoz: '273',
+    rezim: 0
+  }
+  t.deepEqual(result.attributes, expected)
 })
 
 test('do request', async t => {
