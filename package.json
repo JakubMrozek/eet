@@ -31,7 +31,6 @@
   "dependencies": {
     "node-uuid": "^1.4.7",
     "soap": "^0.17.0",
-    "ursa": "^0.9.4",
     "xml-crypto": "^0.8.4"
   }
 }
