@@ -2,7 +2,7 @@
 
 Node.js knihovna pro EET ([elektronickou evidenci tržeb](http://www.etrzby.cz/cs/technicka-specifikace)).
 
-*Upozornění: balíček ve vývoji (verze 0.x) a obsahuje ještě chyby (viz issues). API se sice už měnit nebude, nicméně chybí především více testů a dokumentace. Pull requesty samozřejmě uvítám.*
+*Upozornění: balíček ve vývoji (verze 0.x). API se sice už měnit nebude, nicméně chybí především více testů a dokumentace. Pull requesty samozřejmě uvítám.*
 
 ## Instalace 
 
@@ -81,6 +81,10 @@ Na 99% půjde o problém s certifikátem, více je popsáno v issue [#1](https:/
 
 
 ## Changelog
+
+### v0.4 (13. 11. 2016)
+- oprava generování PKP ([#6](https://github.com/JakubMrozek/eet/issues/6))
+- privátní klíč není potřeba převádět na buffer ([#4](https://github.com/JakubMrozek/eet/pull/4))
 
 ### v0.3 (13. 11. 2016)
 - doplněny validace

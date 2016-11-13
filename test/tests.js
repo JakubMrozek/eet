@@ -9,8 +9,6 @@ const CERTIFICATE = fs.readFileSync('./keys/certificate.pem')
 const TEST_PKP = 'JvCv0lXfT74zuviJaHeO91guUfum1MKhq0NNPxW0YlBGvIIt+I4QxEC3QP6BRwEkIS14n2WN+9oQ8nhQPYwZX7L4W9Ie7CYv1ojcl/YiF4560EdB3IpRNRj3UjQlwSZ5ucSM9vWqp0UTbhJDSUk5/WjC/CEiSYv7OQIqa0NJ0f0+ldzGveLRSF34eu2iqAhs/yfDnENlnMDPVB5ko/zQO0vcC93k5DEWEoytTIAsKd6jKSO7eama8Qe+d0wq9vBzudkfLgCe2C1iERJuyHknhjo9KOx10h5wk99QqVGX8tthpAmryDcX2N0ZGkzJHuzzebnYsxXFYI2tKOJLiLLoLQ=='
 
 test('generate PKP', t => {
-  t.fail()
-  /*
   const result = eet.generatePKP(
     PRIVATE_KEY,
     'CZ1212121218',
@@ -21,7 +19,6 @@ test('generate PKP', t => {
     '34113.00'
   )
   t.is(result, TEST_PKP)
-  */
 })
 
 test('generate BKP', t => {
@@ -133,17 +130,4 @@ test('do request', async t => {
   t.truthy(response.fik.length === 39)
 })
 
-/*
-test('t2', t => {
-  const result = eet.generatePKP(
-    PRIVATE_KEY,
-    'CZ72080043',
-    '181',
-    '00/2535/CN58',
-    '0/2482/IE25',
-    '2016-12-07T22:01:00+01:00',
-    '87988.00'
-  )
-  console.log(result)
-})
-*/
+
