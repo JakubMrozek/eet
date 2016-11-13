@@ -125,7 +125,22 @@ test('do request', async t => {
     privateKey: PRIVATE_KEY,
     certificate: CERTIFICATE
   }
-  const {fik} = await eet.doRequest(options, data)
+  const response = await eet.doRequest(options, data)
   // TODO offline
-  t.truthy(fik.length === 39)
+  t.truthy(response.fik.length === 39)
 })
+
+/*
+test('t2', t => {
+  const result = eet.generatePKP(
+    PRIVATE_KEY,
+    'CZ72080043',
+    '181',
+    '00/2535/CN58',
+    '0/2482/IE25',
+    '2016-12-07T22:01:00+01:00',
+    '87988.00'
+  )
+  console.log(result)
+})
+*/
