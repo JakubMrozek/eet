@@ -82,6 +82,10 @@ Na 99% půjde o problém s certifikátem, více je popsáno v issue [#1](https:/
 
 ## Changelog
 
+### v0.3 (13. 11. 2016)
+- doplněny validace
+- v odpovědi se vrací warningy
+
 ### v0.2 (30. 10. 2016)
 - podpora verze Node.js 4+
 - doplněna dokumentace (časté chyby a převod z .p12 na .pem pomocí balíčku `pem`)
