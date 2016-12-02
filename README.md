@@ -71,6 +71,7 @@ pem.readPkcs12(file, {p12Password: password}, (err, result) => {
   * *options.certificate* (string) - Certifikát.
   * *options.playground* (bool) - Posílat požadavky na playground? Def. false (ne).
   * *options.httpClient* - Viz [soap options](https://github.com/vpulim/node-soap#options), slouží pro testování.
+  * *options.timeout* (number) - Nastavení max. timeoutu (defaultně 2000 ms)
 * *items* - Položky, které se posílají do EET. Mají stejný název jako ve specifikaci EET, jen používají cammel case (tedy místo dic_popl se používá dicPopl).
 
 ## Časté chyby
@@ -81,6 +82,9 @@ Na 99% půjde o problém s certifikátem, více je popsáno v issue [#1](https:/
 
 
 ## Changelog
+
+### v0.5 (2. 12. 2016)
+- doplněna možnost určit timeout 
 
 ### v0.4 (13. 11. 2016)
 - oprava generování PKP ([#6](https://github.com/JakubMrozek/eet/issues/6))
