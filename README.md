@@ -83,7 +83,7 @@ Na 99% půjde o problém s certifikátem, více je popsáno v issue [#1](https:/
 
 ## Changelog
 
-### v0.5 (2. 12. 2016)
+### v0.5 (2. 12. 2016) + v0.5.1
 - doplněna možnost určit timeout 
 
 ### v0.4 (13. 11. 2016)
