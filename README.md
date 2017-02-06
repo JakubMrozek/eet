@@ -84,6 +84,10 @@ Na 99% půjde o problém s certifikátem, více je popsáno v issue [#1](https:/
 
 ## Changelog
 
+### v0.6 (6. 2. 2017)
+- doplněna volba `options.offline`
+- balíček uuid aktualizován na 3.0
+
 ### v0.5 (2. 12. 2016) + v0.5.1
 - doplněna možnost určit timeout 
 
