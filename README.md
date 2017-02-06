@@ -72,6 +72,7 @@ pem.readPkcs12(file, {p12Password: password}, (err, result) => {
   * *options.playground* (bool) - Posílat požadavky na playground? Def. false (ne).
   * *options.httpClient* - Viz [soap options](https://github.com/vpulim/node-soap#options), slouží pro testování.
   * *options.timeout* (number) - Nastavení max. timeoutu (defaultně 2000 ms)
+  * *options.offline* (bool) - Do chybové hlášky vkládat PKP a BKP
 * *items* - Položky, které se posílají do EET. Mají stejný název jako ve specifikaci EET, jen používají cammel case (tedy místo dic_popl se používá dicPopl).
 
 ## Časté chyby
