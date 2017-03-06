@@ -84,6 +84,10 @@ Na 99% půjde o problém s certifikátem, více je popsáno v issue [#1](https:/
 
 ## Changelog
 
+### v0.7 (6. 3. 2017)
+- vrácena podpora pro Node.js v4 ([#16](https://github.com/JakubMrozek/eet/pull/16))
+- oprava regulárního výrazu pro kontrolu formátu pokladny ([#13](https://github.com/JakubMrozek/eet/pull/13))
+
 ### v0.6 (6. 2. 2017)
 - doplněna volba `options.offline`
 - balíček uuid aktualizován na 3.0
