@@ -1,6 +1,6 @@
 {
   "name": "eet",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Node.js knihovna pro EET.",
   "main": "index.js",
   "scripts": {
@@ -29,8 +29,8 @@
     "ava": "^0.16.0"
   },
   "dependencies": {
-    "soap": "^0.17.0",
-    "uuid": "^3.0.0",
+    "soap": "^0.29.0",
+    "uuid": "^3.3.3",
     "xml-crypto": "^0.8.4"
   }
 }
