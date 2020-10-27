@@ -31,6 +31,6 @@
   "dependencies": {
     "soap": "^0.29.0",
     "uuid": "^3.3.3",
-    "xml-crypto": "^0.8.4"
+    "xml-crypto": "^2.0.0"
   }
 }
