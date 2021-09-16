@@ -1,4 +1,4 @@
-# Balíček je archivován a už neplánuji jeho správu
+# Balíček je archivován a už neplánuji jeho správu.
 
 ---
 
