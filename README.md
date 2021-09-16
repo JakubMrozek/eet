@@ -1,8 +1,10 @@
+# Balíček je archivován a už neplánuji jeho správu
+
+---
+
 # eet
 
 Node.js knihovna pro EET ([elektronickou evidenci tržeb](http://www.etrzby.cz/cs/technicka-specifikace)).
-
-*Upozornění: balíček ve vývoji (verze 0.x). API se sice už měnit nebude, nicméně chybí především více testů a dokumentace. Pull requesty samozřejmě uvítám.*
 
 ## Instalace 
 
